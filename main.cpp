@@ -25,16 +25,16 @@ public:
     }
     void Change(int i){
         string title; string firm; float price; int date; int number;
-        cout<<i<<" Object"<<endl;
-        cout<<"give title: ";
+        cout<<i<<" Product"<<endl;
+        cout<<"Input title: ";
         cin>>title;
-        cout<<"give firm: ";
+        cout<<"Input firm: ";
         cin>>firm;
-        cout<<"give price: ";
+        cout<<"Input price: ";
         cin>>price;
-        cout<<"give date: ";
+        cout<<"Input date: ";
         cin>>date;
-        cout<<"give number: ";
+        cout<<"Input number: ";
         cin>>number;
         this->title = title;
         this->firm = firm;
@@ -81,15 +81,15 @@ int main() {
         arrayOfProducts[i].Display();
     }
     string checkTitle;
-    cout<<"Check Title: ";
+    cout<<"Filter: title: ";
     cin>>checkTitle;
     float checkPrice;
-    cout<<"Check Price: ";
+    cout<<"Filter: price: ";
     cin>>checkPrice;
     int checkDate;
-    cout<<"Check Date: ";
+    cout<<"Filter: date: ";
     cin>>checkDate;
-    cout<<"Filter by title:"<<checkTitle;
+    cout<<"Filter: by title: "<<checkTitle;
     for (int i = 0; i < 4; ++i) {
         arrayOfProducts[i].printByTitle(checkTitle);
     }
@@ -101,6 +101,5 @@ int main() {
     for (int i = 0; i < 4; ++i) {
         arrayOfProducts[i].printOverDateProduct(checkDate);
     }
-
     return 0;
 }
